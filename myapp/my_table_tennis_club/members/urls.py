@@ -4,6 +4,7 @@ from . import views
 
 # This is where you create all paths for all view functions
 urlpatterns = [
-    path('members/', views.members, name='members'),
+    path('', views.main, name='main'),
+    path('members/', views.member, name='members'),
+    path('members/details/<int:id>', views.details, name='details'),
 ]
- 
