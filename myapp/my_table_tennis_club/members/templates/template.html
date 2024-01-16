@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <title>Testing Page</title>
+  <link rel="stylesheet" href="{% static 'myglobal.css' %}" />
+  <body>
+    {% comment %} Loop through list fruits {% endcomment %} {%for x in fruits %}
+    <h1>List of Fruits</h1>
+    <h4>{{x}}</h4>
+    {% if x == "Apple" %}
+    <p>{{x}} is a special fruits.</p>
+    {% endif %} {% endfor %}
+
+    <!-- Declare Template Variables in the template-->
+    {% with firstname="Goodnews" lastname="Daniel" %}
+    <p>Hello,{{firstname}} {{ lastname }}! How are you doing today?</p>
+    {% endwith %}
+    <br />
+    <p>In views.py you can see what the fruits variable looks like.</p>
+    <br />
+
+    <ol>
+      {% for x in members %}
+      <li>{{x.firstname}} {{x.lastname}}</li>
+      {% endfor%}
+    </ol>
+  </body>
+</html>
