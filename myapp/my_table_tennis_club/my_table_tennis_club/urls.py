@@ -20,4 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('members.urls')),
+    path('blog/', include('blog.urls')),
 ]
+
+# admin.site.site_title = 'My Table Tennis Club Admin'
+# admin.site.index_title = 'Table Tennis Club'

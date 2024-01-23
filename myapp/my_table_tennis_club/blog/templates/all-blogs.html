@@ -1,0 +1,15 @@
+{% extends 'master.html' %} {% block title %} My Tennis Club - List of All Blogs
+{% endblock %} {% block content %}
+<p><a href="/">Home</a></p>
+<div class="mycard">
+  <h1>My Blogs</h1>
+  <ul>
+    {% for x in blog %}
+    <li onclick="window.location='details/{{x.blog}}'">
+      {{x.title}}<span> </span>
+      <p>{{x.content}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
